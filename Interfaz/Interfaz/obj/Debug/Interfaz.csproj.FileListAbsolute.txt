@@ -1,0 +1,13 @@
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\bin\Debug\Interfaz.exe.config
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\bin\Debug\Interfaz.exe
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\bin\Debug\Interfaz.pdb
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.csproj.AssemblyReference.cache
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.Properties.Resources.resources
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.cache
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.csproj.CoreCompileInputs.cache
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.exe
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.pdb
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.FormPrincipal.resources
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.Iniciar_sesion.resources
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.Crear_cuenta.resources
+C:\Users\yhoid\source\repos\Interfaz\Interfaz\obj\Debug\Interfaz.Juego.resources
