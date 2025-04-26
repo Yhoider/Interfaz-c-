@@ -110,12 +110,26 @@ namespace Interfaz1._2
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+       
+        //Abrir otro formulario
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool cambiado = SistemaUsuarios.CambiarPassword(txtuser.Text, txtpassword.Text);
 
-        // Llamado de funcion para abrir formularios
-        
+            if (cambiado)
+            {
+                MessageBox.Show("Contraseña cambiada exitosamente.");
 
-        
-
+                // Opcional: Después de cambiar la contraseña puedes volver al Login
+                Login loginForm = new Login();
+                loginForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario no encontrado.");
+            }
+        }
 
 
     }

@@ -125,7 +125,7 @@
             linkLabel2.TabIndex = 16;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "¿Haz olvidado tu contraseña?";
-            
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // button1
             // 
@@ -138,7 +138,7 @@
             button1.TabIndex = 15;
             button1.Text = "Acceder";
             button1.UseVisualStyleBackColor = true;
-            
+            button1.Click += button1_Click;
             // 
             // label1
             // 

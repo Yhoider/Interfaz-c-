@@ -121,7 +121,7 @@
             button1.TabIndex = 25;
             button1.Text = "Change";
             button1.UseVisualStyleBackColor = true;
-           
+            button1.Click += button1_Click;
             // 
             // label1
             // 

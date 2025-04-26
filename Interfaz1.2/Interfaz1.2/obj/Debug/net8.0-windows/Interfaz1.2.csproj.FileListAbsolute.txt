@@ -17,3 +17,4 @@ C:\Users\yhoid\source\repos\Interfaz1.2\Interfaz1.2\obj\Debug\net8.0-windows\ref
 C:\Users\yhoid\source\repos\Interfaz1.2\Interfaz1.2\obj\Debug\net8.0-windows\Interfaz1.2.pdb
 C:\Users\yhoid\source\repos\Interfaz1.2\Interfaz1.2\obj\Debug\net8.0-windows\Interfaz1.2.genruntimeconfig.cache
 C:\Users\yhoid\source\repos\Interfaz1.2\Interfaz1.2\obj\Debug\net8.0-windows\ref\Interfaz1.2.dll
+C:\Users\yhoid\source\repos\Interfaz1.2\Interfaz1.2\obj\Debug\net8.0-windows\Interfaz1.2.sourcelink.json

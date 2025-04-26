@@ -117,21 +117,25 @@ namespace Interfaz
         }
 
         //Funcion para abrir los formularios
-        private void AbrirOtroFormulario()
-        {
-            // Creamos el nuevo formulario
-            var nuevoFormulario = new Login();
-
-            // Mostramos el nuevo formulario
-            nuevoFormulario.Show();
-
-            // Cerramos el formulario actual
-            this.Close();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirOtroFormulario();
+            bool creada = SistemaUsuarios.CrearCuenta(txtuser.Text, txtpassword.Text);
+
+            if (creada)
+            {
+                MessageBox.Show("Cuenta creada exitosamente.");
+
+                // Abrir formulario de Login
+                Login loginForm = new Login(); // Instancias el formulario Login
+                loginForm.Show();              // Lo muestras
+                this.Hide();                   // Ocultas el formulario actual (Crear Cuenta)
+            }
+            else
+            {
+                MessageBox.Show("El usuario ya existe.");
+            }
+
         }
     }
 }

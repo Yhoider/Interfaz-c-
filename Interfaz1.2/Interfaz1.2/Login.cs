@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using static Interfaz.Crear_cuenta;
 
 namespace Interfaz1._2
@@ -112,7 +113,31 @@ namespace Interfaz1._2
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+            Jugador jugador = SistemaUsuarios.IniciarSesion(txtuser.Text, txtpassword.Text);
+
+            if (jugador != null)
+            {
+                MessageBox.Show($"Bienvenido, {jugador.User}");
+
+                // Abrir formulario de Juego
+                Juego juegoForm = new Juego(); // Instancias el formulario Juego
+                juegoForm.Show();              // Lo muestras
+                this.Hide();                   // Ocultas el formulario actual (Login)
+            }
+            else
+            {
+                MessageBox.Show("Credenciales incorrectas.");
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form abrir_formulario = new ChangePassword();
+            abrir_formulario.Show();
+            this.Hide();
+        }
     }
 }
