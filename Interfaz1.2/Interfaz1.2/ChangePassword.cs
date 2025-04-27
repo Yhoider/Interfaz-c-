@@ -15,123 +15,126 @@ namespace Interfaz1._2
 {
     public partial class ChangePassword : Form
     {
-        // Inicializa el formulario
+        // Constructor del formulario ChangePassword, que inicializa los componentes de la interfaz.
         public ChangePassword()
         {
-            InitializeComponent();
+            InitializeComponent(); // Inicializa los componentes del formulario, como botones, cuadros de texto, etc.
         }
 
-        // Logica para arrastrar el Formulapena por Windows (Funciones de una biblioteca ya existente)
+        // Importación de funciones externas desde la librería "user32.dll" para permitir manipulación de la ventana.
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        // Cierra el formulario
+        // Método para cerrar la aplicación cuando el usuario hace clic en el botón de cerrar.
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); // Cierra la aplicación y termina la ejecución.
         }
+
+        // Variables para almacenar la ubicación y el tamaño de la ventana.
         int lx, ly;
         int sw, sh;
 
-        // Restaura la pestaña al tamaño por defecto
+        // Método para restaurar la ventana al tamaño original cuando se hace clic en el botón "Restaurar".
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            btnMaximizar.Visible = true;
-            btnRestaurar.Visible = false;
-            this.Size = new Size(sw, sh);
-            this.Location = new Point(lx, ly);
+            btnMaximizar.Visible = true; // Muestra el botón de maximizar.
+            btnRestaurar.Visible = false; // Oculta el botón de restaurar.
+            this.Size = new Size(sw, sh); // Restaura el tamaño original de la ventana.
+            this.Location = new Point(lx, ly); // Restaura la ubicación original de la ventana.
         }
-        // Minimiza la pestalla
+
+        // Método para minimizar la ventana cuando se hace clic en el botón de minimizar.
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized; // Cambia el estado de la ventana a minimizado.
         }
 
-        // Maximiza la pestaña
+        // Método para maximizar la ventana al tamaño completo de la pantalla.
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            lx = this.Location.X;
+            lx = this.Location.X; // Guarda la ubicación actual de la ventana.
             ly = this.Location.Y;
-            sw = this.Size.Width;
+            sw = this.Size.Width; // Guarda el tamaño actual de la ventana.
             sh = this.Size.Height;
-            btnMaximizar.Visible = false;
-            btnRestaurar.Visible = true;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btnMaximizar.Visible = false; // Oculta el botón de maximizar.
+            btnRestaurar.Visible = true;  // Muestra el botón de restaurar.
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size; // Cambia el tamaño de la ventana al tamaño máximo de la pantalla.
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location; // Coloca la ventana en la esquina superior izquierda de la pantalla.
         }
 
-        // Oculta el texto predefinido
+        // Método para ocultar el texto predeterminado en el cuadro de texto "Usuario" cuando el usuario hace clic.
         private void txtuser_Enter(object sender, EventArgs e)
         {
-            if (txtuser.Text == "Usuario")
+            if (txtuser.Text == "Usuario") // Verifica si el texto es el predeterminado.
             {
-                txtuser.Text = "";
-                txtuser.ForeColor = Color.LightGray;
-
+                txtuser.Text = ""; // Borra el texto predeterminado.
+                txtuser.ForeColor = Color.LightGray; // Cambia el color del texto a gris claro.
             }
         }
-        // Si se seleciona la casilla y se deja vacia pone de nuevo el texto predefinido
+
+        // Método que restaura el texto predeterminado en el cuadro de texto "Usuario" si el usuario deja el campo vacío.
         private void txtuser_Leave(object sender, EventArgs e)
         {
-            if (txtuser.Text == "")
+            if (txtuser.Text == "") // Si el campo está vacío.
             {
-                txtuser.Text = "Usuario";
-                txtuser.ForeColor = Color.DimGray;
+                txtuser.Text = "Usuario"; // Restaura el texto predeterminado.
+                txtuser.ForeColor = Color.DimGray; // Cambia el color del texto a gris oscuro.
             }
         }
 
-        // Acultar el texto predefinido y oculta la contraseña
+        // Método para ocultar el texto predeterminado en el cuadro de texto "Contraseña" y mostrar los caracteres como contraseñas.
         private void txtpassword_Enter(object sender, EventArgs e)
         {
-            if (txtpassword.Text == "Contraseña")
+            if (txtpassword.Text == "Contraseña") // Verifica si el texto es el predeterminado.
             {
-                txtpassword.Text = "";
-                txtpassword.ForeColor = Color.LightGray;
-                txtpassword.UseSystemPasswordChar = true;
+                txtpassword.Text = ""; // Borra el texto predeterminado.
+                txtpassword.ForeColor = Color.LightGray; // Cambia el color del texto a gris claro.
+                txtpassword.UseSystemPasswordChar = true; // Muestra los caracteres como contraseñas (con puntos).
             }
         }
 
-        // Si se seleciona la casilla y se deja vacia pone de nuevo el texto predefinido
+        // Método que restaura el texto predeterminado en el cuadro de texto "Contraseña" si el usuario deja el campo vacío.
         private void txtpassword_Leave(object sender, EventArgs e)
         {
-            if (txtpassword.Text == "")
+            if (txtpassword.Text == "") // Si el campo está vacío.
             {
-                txtpassword.Text = "Contraseña";
-                txtpassword.ForeColor = Color.DimGray;
-                txtpassword.UseSystemPasswordChar = false;
+                txtpassword.Text = "Contraseña"; // Restaura el texto predeterminado.
+                txtpassword.ForeColor = Color.DimGray; // Cambia el color del texto a gris oscuro.
+                txtpassword.UseSystemPasswordChar = false; // Deja de mostrar los caracteres como contraseñas.
             }
         }
 
-        // Aplicacion de una biblioteca para mover la pestaña
+        // Método para permitir mover la ventana del formulario sin bordes, haciendo clic y arrastrando.
         private void ChangePassword_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(this.Handle, 0x112, 0xf012, 0); // Llama a las funciones de Windows para mover la ventana.
         }
-       
-        //Abrir otro formulario
+
+        // Método que maneja el cambio de la contraseña cuando el usuario hace clic en el botón "Cambiar Contraseña".
         private void button1_Click(object sender, EventArgs e)
         {
+            // Intenta cambiar la contraseña del usuario con el nombre de usuario y la nueva contraseña proporcionados.
             bool cambiado = SistemaUsuarios.CambiarPassword(txtuser.Text, txtpassword.Text);
 
-            if (cambiado)
+            if (cambiado) // Si la contraseña fue cambiada exitosamente.
             {
-                MessageBox.Show("Contraseña cambiada exitosamente.");
+                MessageBox.Show("Contraseña cambiada exitosamente."); // Muestra un mensaje de éxito.
 
-                // Opcional: Después de cambiar la contraseña puedes volver al Login
-                Login loginForm = new Login();
-                loginForm.Show();
-                this.Hide();
+                // Abre el formulario de login y oculta el formulario actual.
+                Login loginForm = new Login(); // Instancia el formulario Login.
+                loginForm.Show(); // Muestra el formulario de login.
+                this.Hide(); // Oculta el formulario de cambio de contraseña.
             }
             else
             {
-                MessageBox.Show("Usuario no encontrado.");
+                MessageBox.Show("Usuario no encontrado."); // Muestra un mensaje de error si el usuario no es encontrado.
             }
         }
-
 
     }
 }
