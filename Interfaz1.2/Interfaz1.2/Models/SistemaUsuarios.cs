@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interfaz1._2
+namespace Interfaz1._2.Models
 {
     internal static class SistemaUsuarios
     {

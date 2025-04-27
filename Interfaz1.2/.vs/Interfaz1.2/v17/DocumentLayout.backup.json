@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|c:\\users\\yhoid\\source\\repos\\interfaz1.2\\interfaz1.2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|solutionrelative:interfaz1.2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|c:\\users\\yhoid\\source\\repos\\interfaz1.2\\interfaz1.2\\juego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|solutionrelative:interfaz1.2\\juego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\interfaz1.2\\juego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|solutionrelative:interfaz1.2\\juego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|c:\\users\\yhoid\\source\\repos\\interfaz1.2\\interfaz1.2\\models\\disparar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|solutionrelative:interfaz1.2\\models\\disparar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|c:\\users\\yhoid\\source\\repos\\interfaz1.2\\interfaz1.2\\models\\campo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD40F8E6-1036-47C1-863F-B607CF43A723}|Interfaz1.2\\Interfaz1.2.csproj|solutionrelative:interfaz1.2\\models\\campo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,16 +31,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Program.cs",
-              "RelativeDocumentMoniker": "Interfaz1.2\\Program.cs",
-              "ToolTip": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Program.cs",
-              "RelativeToolTip": "Interfaz1.2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Title": "Juego.cs",
+              "DocumentMoniker": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Juego.cs",
+              "RelativeDocumentMoniker": "Interfaz1.2\\Juego.cs",
+              "ToolTip": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Juego.cs",
+              "RelativeToolTip": "Interfaz1.2\\Juego.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAqwJYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T15:53:10.027Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-04-26T23:57:34.315Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Juego.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Juego.cs",
+              "RelativeDocumentMoniker": "Interfaz1.2\\Juego.cs",
+              "ToolTip": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Juego.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Interfaz1.2\\Juego.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T23:57:31.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Disparar.cs",
+              "DocumentMoniker": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Models\\Disparar.cs",
+              "RelativeDocumentMoniker": "Interfaz1.2\\Models\\Disparar.cs",
+              "ToolTip": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Models\\Disparar.cs",
+              "RelativeToolTip": "Interfaz1.2\\Models\\Disparar.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T23:53:27.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Campo.cs",
+              "DocumentMoniker": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Models\\Campo.cs",
+              "RelativeDocumentMoniker": "Interfaz1.2\\Models\\Campo.cs",
+              "ToolTip": "C:\\Users\\yhoid\\source\\repos\\Interfaz1.2\\Interfaz1.2\\Models\\Campo.cs",
+              "RelativeToolTip": "Interfaz1.2\\Models\\Campo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T23:44:18.045Z"
             }
           ]
         }

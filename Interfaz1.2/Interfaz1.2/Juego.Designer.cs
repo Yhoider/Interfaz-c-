@@ -34,9 +34,9 @@
             btnMaximizar = new PictureBox();
             btnRestaurar = new PictureBox();
             btnCerrar = new PictureBox();
-            button1 = new Button();
+            btnDisparar = new Button();
             label1 = new Label();
-            txtcoordeY = new TextBox();
+            intcoordeY = new TextBox();
             intcoordeX = new TextBox();
             linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -110,17 +110,18 @@
             btnCerrar.TabStop = false;
             btnCerrar.Click += btnCerrar_Click;
             // 
-            // button1
+            // btnDisparar
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(380, 333);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(468, 42);
-            button1.TabIndex = 15;
-            button1.Text = "Disparar";
-            button1.UseVisualStyleBackColor = true;
+            btnDisparar.Anchor = AnchorStyles.None;
+            btnDisparar.FlatStyle = FlatStyle.Flat;
+            btnDisparar.Location = new Point(380, 333);
+            btnDisparar.Margin = new Padding(4, 3, 4, 3);
+            btnDisparar.Name = "btnDisparar";
+            btnDisparar.Size = new Size(468, 42);
+            btnDisparar.TabIndex = 15;
+            btnDisparar.Text = "Disparar";
+            btnDisparar.UseVisualStyleBackColor = true;
+            btnDisparar.Click += btnDisparar_Click;
             // 
             // label1
             // 
@@ -135,21 +136,21 @@
             label1.TabIndex = 14;
             label1.Text = "Juego";
             // 
-            // txtcoordeY
+            // intcoordeY
             // 
-            txtcoordeY.Anchor = AnchorStyles.None;
-            txtcoordeY.BackColor = Color.FromArgb(15, 15, 15);
-            txtcoordeY.BorderStyle = BorderStyle.None;
-            txtcoordeY.Font = new Font("Centaur", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtcoordeY.ForeColor = Color.DimGray;
-            txtcoordeY.Location = new Point(380, 253);
-            txtcoordeY.Margin = new Padding(4, 3, 4, 3);
-            txtcoordeY.Name = "txtcoordeY";
-            txtcoordeY.Size = new Size(468, 19);
-            txtcoordeY.TabIndex = 13;
-            txtcoordeY.Text = "Coordenadas Y";
-            txtcoordeY.Enter += txtpassword_Enter;
-            txtcoordeY.Leave += txtpassword_Leave;
+            intcoordeY.Anchor = AnchorStyles.None;
+            intcoordeY.BackColor = Color.FromArgb(15, 15, 15);
+            intcoordeY.BorderStyle = BorderStyle.None;
+            intcoordeY.Font = new Font("Centaur", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            intcoordeY.ForeColor = Color.DimGray;
+            intcoordeY.Location = new Point(380, 253);
+            intcoordeY.Margin = new Padding(4, 3, 4, 3);
+            intcoordeY.Name = "intcoordeY";
+            intcoordeY.Size = new Size(468, 19);
+            intcoordeY.TabIndex = 13;
+            intcoordeY.Text = "Coordenadas Y";
+            intcoordeY.Enter += txtpassword_Enter;
+            intcoordeY.Leave += txtpassword_Leave;
             // 
             // intcoordeX
             // 
@@ -187,9 +188,9 @@
             Controls.Add(btnMaximizar);
             Controls.Add(btnRestaurar);
             Controls.Add(btnCerrar);
-            Controls.Add(button1);
+            Controls.Add(btnDisparar);
             Controls.Add(label1);
-            Controls.Add(txtcoordeY);
+            Controls.Add(intcoordeY);
             Controls.Add(intcoordeX);
             Controls.Add(linkLabel1);
             Controls.Add(panel1);
@@ -212,9 +213,9 @@
         private PictureBox btnMaximizar;
         private PictureBox btnRestaurar;
         private PictureBox btnCerrar;
-        private Button button1;
+        private Button btnDisparar;
         private Label label1;
-        private TextBox txtcoordeY;
+        private TextBox intcoordeY;
         private TextBox intcoordeX;
         private LinkLabel linkLabel1;
     }

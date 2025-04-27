@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Interfaz1._2.Models;
 using Microsoft.VisualBasic.ApplicationServices;
 using static Interfaz.Crear_cuenta;
 

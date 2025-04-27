@@ -8,15 +8,25 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Interfaz1._2.Models;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Interfaz1._2
 {
     public partial class Juego : Form
     {
+        private Campo campo;
+        private Disparar disparar;
         public Juego()
         {
             InitializeComponent();
+            campo = new Campo(5, 5); // Asumimos que el campo tiene 5 filas y 5 columnas
+            campo.GenerarCampo();
+            disparar = new Disparar(campo);
+
         }
+
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -91,10 +101,10 @@ namespace Interfaz1._2
         // Oculta el texto predefinido
         private void txtpassword_Enter(object sender, EventArgs e)
         {
-            if (txtcoordeY.Text == "Coordenadas Y")
+            if (intcoordeY.Text == "Coordenadas Y")
             {
-                txtcoordeY.Text = "";
-                txtcoordeY.ForeColor = Color.LightGray;
+                intcoordeY.Text = "";
+                intcoordeY.ForeColor = Color.LightGray;
 
             }
         }
@@ -107,5 +117,58 @@ namespace Interfaz1._2
                 intcoordeX.ForeColor = Color.DimGray;
             }
         }
+
+        private void btnDisparar_Click(object sender, EventArgs e)
+        {
+            // Obtener las coordenadas de las cajas de texto
+            int x = Convert.ToInt32(intcoordeX.Text) - 1;
+            int y = Convert.ToInt32(intcoordeY.Text) - 1;
+
+            // Realizar el disparo utilizando la clase Disparar
+            bool acierto = disparar.RealizarDisparo(x, y);
+
+            // Mostrar el resultado
+            if (acierto)
+            {
+                MessageBox.Show("¡Impacto! Has hundido un barco.");
+            }
+            else
+            {
+                MessageBox.Show("Fallaste. Intenta de nuevo.");
+            }
+
+            // Verificar si ya no quedan barcos
+            if (!disparar.QuedanBarcos())
+            {
+                MessageBox.Show("¡Todos los barcos han sido hundidos! Fin del juego.");
+                MostrarPuntaje();
+            }
+            else
+            {
+                MostrarPuntaje();  // Mostrar el puntaje después de cada disparo.
+            }
+        }
+
+        private bool AnyBarcosRestantes()
+        {
+            // Verifica si quedan barcos en el campo
+            foreach (var fila in campo.Matriz)
+            {
+                if (fila.Contains("🚤") || fila.Contains("🛥️"))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void MostrarPuntaje()
+        {
+            // Muestra el puntaje del jugador
+            string tabla = $"Puntaje: {disparar.Puntaje}";
+            MessageBox.Show(tabla);
+        }
+
     }
 }
+

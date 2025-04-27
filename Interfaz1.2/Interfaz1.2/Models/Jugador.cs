@@ -18,4 +18,6 @@ public class Jugador
         this.User = user;
         this.Password = password;
     }
+
+
 }

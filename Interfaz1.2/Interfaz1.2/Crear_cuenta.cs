@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Interfaz1._2;
+using Interfaz1._2.Models;
 
 namespace Interfaz
 {
